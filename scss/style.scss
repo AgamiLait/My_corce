@@ -1,0 +1,172 @@
+@import "_normalizez.scss";
+@import "_resets.scss";
+
+html{
+  /* для легкого подсчета установим размер 10px/ при замене одной строчки кода мы адаптировали весь наш сайт при необходимости в будущем при адаптиве */
+  /* установим в процентах 10/16 *100 = 62.5%(пишем процент через точку_._? */
+  font-size: 65.2%;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+}
+
+.container {
+  background-color: #FFFFFF;
+}
+
+.header-box {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-fon.jpg) center / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.header-content {
+  &__img {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+  }
+}
+
+.box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  &_secondary {
+    display: block;
+    font-style: normal;
+    font-weight: 10rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: .5rem;
+    animation-name: rigfttitle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    backface-visibility: hidden;
+    padding-bottom: 5rem;
+  }
+
+  &__first {
+    display: block;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 6rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    animation-name: lefttitle;
+    /* применили сглаживание */
+    backface-visibility: hidden;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+  }
+}
+
+/* сценарий анимации */
+@keyframes lefttitle{
+  0%{
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateX(5rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.btn-box{
+  position: relative;
+  /* посещения по умолчанию */
+  &:link,&:visited{
+    background: #FFFFFF;
+    border-radius: 5rem;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: .5rem;
+    color: #777777;
+    /* замедлим при наведение */
+    transition: all .2s;
+  }
+  /* наведения */
+  &:hover{
+    transform: translateY(-0.3rem);
+    box-shadow: (0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3));
+    &::after{
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+  /* нажатие */
+  &:active{
+    transform: translateY(-0.3rem);
+  }
+  /* всегда использовать content: ""; */
+  &::after{
+    content: "";
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    z-index: -1;
+    backface-visibility: hidden;
+    transition: all .3s;
+  }
+  &_anim {
+    animation: btnup 1s ease-out 3s ;
+    /* точная настройка кадров, кода и каким образом нам нужно воспроизводить нашу анимацию, например backwards -сохранит стили первого ключевого кадра*/
+    animation-fill-mode: backwards;
+  }
+}
+
+
+
+@keyframes btnup{
+  0%{
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+
+@keyframes rigfttitle{
+  0%{
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateX(-5rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
