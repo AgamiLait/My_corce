@@ -3,3 +3,12 @@
   text-transform: uppercase;
   color: $color;
 }
+
+//псевдоэлемент для удаления с 2 сторон для float
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
