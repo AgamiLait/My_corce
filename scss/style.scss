@@ -4,7 +4,11 @@ $color-grey: #777777;
 $color-white: #FFFFFF;
 $color-black:#000000;
 
-
+@mixin link-style {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-grey;
+}
 
 @import "_normalizez.scss";
 @import "_resets.scss";
@@ -103,7 +107,8 @@ body{
   position: relative;
   /* посещения по умолчанию */
   &:link,&:visited{
-    background: $color-white;
+    background-color: $color-white;
+    @include link-style;
     border-radius: 5rem;
     display: inline-block;
     padding: 1.5rem 4rem;
@@ -112,7 +117,6 @@ body{
     font-size: 2rem;
     line-height: 2.4rem;
     letter-spacing: .5rem;
-    color: $color-grey;
     /* замедлим при наведение */
     transition: all .2s;
   }
