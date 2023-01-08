@@ -1,0 +1,47 @@
+/* сценарий анимации */
+@keyframes lefttitle {
+  0% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes btnup {
+  0% {
+    opacity: 0;
+    transform: translateY(7rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+
+@keyframes rigfttitle {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}

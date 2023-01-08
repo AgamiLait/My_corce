@@ -1,0 +1,57 @@
+.btn-box {
+  position: relative;
+
+  /* посещения по умолчанию */
+  &:link,
+  &:visited {
+    background-color: $color-white;
+    @include link-style($color-grey);
+    border-radius: 5rem;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: .5rem;
+    /* замедлим при наведение */
+    transition: all .2s;
+  }
+
+  /* наведения */
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: (0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3));
+
+    &::after {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+  /* нажатие */
+  &:active {
+    transform: translateY(-0.3rem);
+  }
+
+  /* всегда использовать content: ""; */
+  &::after {
+    content: "";
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    z-index: -1;
+    backface-visibility: hidden;
+    transition: all .3s;
+  }
+
+  &_anim {
+    animation: btnup 1s ease-out 2s;
+    /* точная настройка кадров, кода и каким образом нам нужно воспроизводить нашу анимацию, например backwards -сохранит стили первого ключевого кадра*/
+    animation-fill-mode: backwards;
+  }
+}
