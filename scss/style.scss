@@ -4,19 +4,22 @@ $color-grey: #777777;
 $color-white: #FFFFFF;
 $color-black:#000000;
 
-@mixin link-style {
+@mixin link-style($color) {
   text-decoration: none;
   text-transform: uppercase;
-  color: $color-grey;
+  color: $color;
+}
+
+@function calcFontSize ($a,$b){
+  @return $a/$b * 100
 }
 
 @import "_normalizez.scss";
 @import "_resets.scss";
 
 html{
-  /* для легкого подсчета установим размер 10px/ при замене одной строчки кода мы адаптировали весь наш сайт при необходимости в будущем при адаптиве */
-  /* установим в процентах 10/16 *100 = 62.5%(пишем процент через точку_._? */
-  font-size: 65.2%;
+  /* *1% чтобы считалось в процентах */
+  font-size: calcFontSize(10,16) * 1%;
 }
 
 body{
@@ -108,7 +111,7 @@ body{
   /* посещения по умолчанию */
   &:link,&:visited{
     background-color: $color-white;
-    @include link-style;
+    @include link-style($color-grey);
     border-radius: 5rem;
     display: inline-block;
     padding: 1.5rem 4rem;
