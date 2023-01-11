@@ -47,3 +47,39 @@ body {
     animation-timing-function: ease;
   }
 }
+
+.main-section-one {
+  padding-top: 8rem;
+  &__title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3.6rem;
+    //добавили фон
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+    //ghtabrc + background-clip сосредоточенный на текст
+    -webkit-background-clip: text;
+    //сам цвет текста прозрачный чтобы видеть фон_
+    color: transparent;
+    backface-visibility: hidden;
+    transition: all 0.3s;
+  }
+    &:hover{
+      transform: skewY(.2deg) skewY(.3deg);
+      text-shadow: 1rem 4rem 4rem rgba($color-black, .35);
+    }
+    
+}
+
+.title-section-one {
+  letter-spacing: .2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.par-section-one {
+  letter-spacing: .2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+}

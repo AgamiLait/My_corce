@@ -37,7 +37,6 @@
 //находим по атрибуту для всех используем
 [class^="col-"]{
     float: left;
-    background-color: green;
     &:not(:last-child){
         margin-right: $gutter-horizontal;
     }

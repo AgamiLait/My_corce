@@ -1,0 +1,27 @@
+.btn-section {
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem;
+  color: $color-grey;
+  font-weight: 700;
+  transition: .4s all;
+  backface-visibility: visible;
+  &:link,
+  &:visited {
+      
+    }
+  &:hover {
+      transform: translateY(-0.3rem);
+      background-color: $color-dark-brown;
+      color: $color-white;
+      border-radius: 1.5rem;
+  }
+  &:active {
+      transform: translateY(-0.3rem);
+  }
+}
+
+
+
