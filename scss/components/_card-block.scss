@@ -1,0 +1,17 @@
+.card-block {
+  display: inline-block;
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba($color-white, 0.8);
+  border-radius: 0.5rem;
+  transition: all .2s;
+  &:hover{
+    transform: translateY(-.3rem);
+  }
+}
+.icon-card {
+  font-size: 6.3rem;
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+  -webkit-background-clip: text;
+  color:transparent;
+}
