@@ -1,0 +1,35 @@
+.section-img {
+  position: relative;
+  &__pict {
+    position: absolute;
+    width: 70%;
+    border-radius: .5rem;
+    //при сипользование outline отступ от элемента
+    outline-offset: 1rem;
+    transition: .6s all;
+    &_s1 {
+      top: 0rem;
+      left: 0rem;
+    }
+
+    &_s2 {
+      top: 9rem;
+      left: 9rem;
+    }
+
+    &_s3 {
+      top: 18rem;
+      left: 18rem;
+    }
+    &:hover {
+      outline: .3rem $color-dark-brown solid;
+      z-index: 20;
+      transform: scale(1.1);
+    }
+
+  }
+  //вызываем через родителя картинку и уменьшаем элемент если он не в hover
+  &:hover &__pict:not(:hover){
+    transform: scale(0.88);
+  }
+}
