@@ -1,0 +1,114 @@
+.card-three {
+  //тон фона поменять как фотошопе
+  background-blend-mode: hard-light;
+  position: relative;
+  height: 50rem;
+  //use perspective
+  perspective: 150rem;
+  -webkit-perspective: 150rem ;
+  &__item {
+    height: 50rem;
+    //work only position deg card rotate
+    position: absolute;
+    transition: 2s all ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //del friz
+    backface-visibility: hidden;
+    color: white;
+    &_after {
+      background: $color-white;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+    }
+
+    &_before {
+      background: $color-dark-brown;
+      transform: rotateY(180deg);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+    }
+  }
+  //hover after
+  &:hover &__item_after{
+    transform: rotateY(-180deg);
+  }
+  //hover before
+  &:hover &__item_before{
+    transform: rotateY(0deg);
+  }
+}
+
+.card-three {
+  &__title {
+    letter-spacing: .2rem ;
+    font-size: 2.8rem;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+
+  }
+
+  &__span {
+    border-radius: .5rem;
+    background: linear-gradient(180deg, #C3956A 10%, #A24F03 100%);
+    padding: 1.5rem ;
+    &_s1 {
+      position: absolute;
+      top: 15rem;
+      right: 0rem;
+    }
+    &_s2 {
+      position: relative;
+      top: -6rem;
+      right: 0rem;
+    }
+  }
+}
+
+.card-three {
+  &__ul {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    text-decoration-line: underline;
+    list-style: none;
+    text-align: center;
+    margin-right: 3rem;
+    color: $color-grey;
+  }
+    li:not(:last-child){
+      margin-bottom: .5rem;
+    }
+}
+
+
+.card-three-box {
+  padding: 10rem 0;
+  text-align: center;
+  &__ttitle {
+    font-weight: 300;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    margin-bottom: 8.7rem;
+    }
+  
+
+  &__sub-title {
+    font-weight: 300;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    color: #FFFFFF;
+    font-size: 7.2rem;
+    margin-bottom: 8.7rem;
+  }
+
+  &__btn{
+
+  }
+}
+
