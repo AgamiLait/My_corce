@@ -2,7 +2,8 @@
   position: relative;
 
   /* посещения по умолчанию */
-  &:link,
+  //т.к у button form псевдоклассоа таких нету поэтому мы просто добоваляем &, и эти вещи могут применяться также просто к классу
+  &, &:link,
   &:visited {
     background-color: $color-white;
     @include link-style($color-grey);

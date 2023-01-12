@@ -1,0 +1,110 @@
+.form-box {
+  background: linear-gradient(90deg, rgba($color-white, 1) 35.94%, rgba(0, 0, 0, 0.6) 100%), url(../img/form-img.jpg) center / cover no-repeat;
+  padding: 5rem;
+}
+
+
+.form-item {
+
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+  &__input {
+    width: 32%;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: .5rem solid $color-dark-brown;
+    transition: all .5s;
+    //фокус валидный то -
+    &:focus:valid{
+      border-bottom: .5rem solid green;
+    }
+    //просто фокус
+    &:focus{
+      outline: none;
+      border-bottom: .5rem solid rgb(218, 8, 8);
+    }
+    
+    
+  }
+  //не работает хз должен исчезать лейбл если есть плейсхолдер и нет заполнения
+  &__input:placeholder-shown + &__leb{
+    opacity: 0;
+  }
+
+  &__leb{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem; 
+    transition: 1s all;
+  }
+}
+
+.title_form{
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.form-radio {
+  margin-left: 5rem;
+  width: 20%;
+  display: inline-block;
+  &__but {
+    display: none;
+  }
+
+  &__comment {
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &__span-btn {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: -1.4rem;
+    left: -4rem;
+    border: .7rem solid $color-dark-brown;
+    &::after{
+      display: none;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      background:$color-dark-brown;
+    }
+  }
+  //обращаемся к родителю при клике по радиокнопке ко всем лейблам спан и автору
+  &__but:checked ~ &__comment &__span-btn::after{
+    display: inline-block;
+  }
+}
+
+.btn_form{
+  margin-top: 3rem;
+  display: block;
+  background: $color-dark-brown;
+  color: $color-white;
+  border: none;
+  &::after{
+    background-color: $color-dark-brown;
+  }
+}
