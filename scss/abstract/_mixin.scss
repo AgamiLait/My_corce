@@ -11,3 +11,55 @@
         clear: both;
     }
 }
+
+
+//1
+//adapt mixin - используем обычный мексин просто подстовляя контент
+@mixin funcAdapr {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+//use 1
+//@include funcAdapr{
+  //font-size: 5rem;
+//}
+
+//2 условие -используем если будет слова равно phone
+//!!!используем запросы сверху вниз от маленьких к большим
+@mixin funcAdapr2 ($break) {
+  @if $break == phone {
+    @media (max-width: 600px) {
+        @content;
+      }
+  }
+
+  @if $break == tab-port  {
+    @media (max-width: 950px) {
+        @content;
+      }
+  }
+
+  @if $break == tab-lend  {
+    @media (max-width: 1240px) {
+        @content;
+      }
+  }
+  //при больших экранах так же меняем контент
+  @if $break == big-screen  {
+    @media (max-width: 1800px) {
+        @content;
+      }
+  }
+}
+//в аргументе указываем несколько брэйкпоинтов
+//-phone
+//-tab-port
+//-tab-lend
+//-big-screen
+
+
+//use 2
+//@include funcAdapr2(phone){
+  //font-size: 5rem;
+//}
