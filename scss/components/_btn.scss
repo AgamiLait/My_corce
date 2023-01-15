@@ -18,6 +18,9 @@
     /* замедлим при наведение */
     transition: all .2s;
   }
+  @include funcAdapr2(phone-low) {
+    padding: 1rem 1rem;
+  }
 
   /* наведения */
   &:hover {

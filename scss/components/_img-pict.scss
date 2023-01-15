@@ -1,12 +1,15 @@
 .section-img {
   position: relative;
+  @include funcAdapr2(phone-low) {
+    margin-bottom: 55rem;
+  }
   &__pict {
     position: absolute;
     width: 50%;
     border-radius: .5rem;
-    //при сипользование outline отступ от элемента
+    //при иcпользование outline отступ от элемента
     outline-offset: 1rem;
-    transition: .6s all;
+    transition: .6s all;z-index: 3;
     &_s1 {
       top: 0rem;
       left: 0rem;

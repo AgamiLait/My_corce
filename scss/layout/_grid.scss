@@ -6,6 +6,7 @@
         margin-bottom: $margin-vertical-big;
     }
     @include clearfix;
+    
 }
 
 //расчет каждого столбца
@@ -40,6 +41,9 @@
     &:not(:last-child){
         margin-right: $gutter-horizontal;
     }
+    @include funcAdapr2(phone-low) {
+      width: 100%;
+    } 
 }
 
     

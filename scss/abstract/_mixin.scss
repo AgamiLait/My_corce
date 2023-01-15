@@ -28,8 +28,14 @@
 //2 условие -используем если будет слова равно phone
 //!!!используем запросы сверху вниз от маленьких к большим
 @mixin funcAdapr2 ($break) {
+  @if $break == phone-low {
+    @media (max-width: 630px) {
+      @content;
+    }
+  }
+
   @if $break == phone {
-    @media (max-width: 600px) {
+    @media (max-width: 720px) {
         @content;
       }
   }
@@ -47,7 +53,7 @@
   }
   //при больших экранах так же меняем контент
   @if $break == big-screen  {
-    @media (max-width: 1800px) {
+    @media (min-width: 1800px) {
         @content;
       }
   }

@@ -6,6 +6,7 @@
   //use perspective
   perspective: 150rem;
   -webkit-perspective: 150rem ;
+  margin-bottom: 5rem;
   &__item {
     height: 50rem;
     //work only position deg card rotate
@@ -67,6 +68,11 @@
   }
   &__img{
     width: 100%;
+    @include funcAdapr2(phone-low) {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
   }
 }
 

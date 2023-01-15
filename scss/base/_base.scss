@@ -5,14 +5,15 @@
 }
 
 html {
+  font-size: 60.5%;
   @include funcAdapr2(big-screen){
     font-size: 75%;
   }
   @include funcAdapr2(tab-lend) {
-    font-size: 55%;
+    font-size: 50%;
   }
   @include funcAdapr2(tab-port) {
-      font-size: 45%;
+      font-size: 35%;
   }
   @include funcAdapr2(phone) {
     font-size: 30%;
