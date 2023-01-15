@@ -1,6 +1,9 @@
 .section-two{
   background: linear-gradient(90.05deg, rgba($color-brown, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/header-fon.jpg) center / cover no-repeat;
   padding: 20rem 0rem 20rem 0rem;
+  @media (min-resolution:192dpi) and (min-width: 950px), (min-width: 1340px){
+    background: linear-gradient(90.05deg, rgba($color-brown, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/big/fon-big.jpg) center / cover no-repeat;
+  }
   //повернули секцию 
   transform: skewY(7deg);
   //все остальное что вложили в секцию вернули в нормальное положения

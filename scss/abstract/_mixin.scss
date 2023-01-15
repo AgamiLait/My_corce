@@ -29,31 +29,31 @@
 //!!!используем запросы сверху вниз от маленьких к большим
 @mixin funcAdapr2 ($break) {
   @if $break == phone-low {
-    @media (max-width: 580px) {
+    @media only screen and (max-width: 580px) {
       @content;
     }
   }
 
   @if $break == phone {
-    @media (max-width: 720px) {
+    @media only screen and (max-width: 720px) {
         @content;
       }
   }
 
   @if $break == tab-port  {
-    @media (max-width: 950px) {
+    @media only screen and (max-width: 950px) {
         @content;
       }
   }
 
   @if $break == tab-lend  {
-    @media (max-width: 1240px) {
+    @media only screen and (max-width: 1240px) {
         @content;
       }
   }
   //при больших экранах так же меняем контент
   @if $break == big-screen  {
-    @media (min-width: 1800px) {
+    @media only screen and (min-width: 1800px) {
         @content;
       }
   }
@@ -69,3 +69,8 @@
 //@include funcAdapr2(phone){
   //font-size: 5rem;
 //}
+
+//при экранах где нет возможности навадить
+@media only screen and (min-width: 1800px), (hover:none) {
+  //-//-//
+}
