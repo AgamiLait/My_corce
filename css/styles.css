@@ -1,0 +1,173 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#title {
+  background-color: rgb(160, 127, 191);
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: white;
+  margin: 3rem 0;
+}
+
+.container-fluid{
+  padding: 3% 12% 7% 12%;
+}
+
+button i {
+  text-transform: lowercase;
+}
+
+.navbar{
+  padding: 4rem 0;
+}
+
+.navbar-brand{
+  font-size: 3rem;
+}
+
+.nav-item{
+  margin-right: 5rem;
+  font-size: 1.5rem;
+}
+
+.but-down{
+  margin: 3rem 5rem 0 0;
+  font-size: 2rem;
+}
+
+.img-dog{
+  margin-top: 3rem;
+  margin-left: 6rem ;
+  width: 50%;
+  transform: rotate(35deg);
+  position: absolute;
+  z-index: 0;
+}
+
+.features-container {
+  position: relative;
+  background-color: white;
+  z-index: 10;
+  padding: 5% 15%;
+}
+
+.features-item {
+  text-align: center;
+  padding: 5%;
+}
+
+.features-item h3{
+  font-weight: 700;
+}
+
+.features-item p{
+  font-weight: 400;
+}
+
+.features-item i{
+  color: rgb(137, 116, 156);
+  padding-bottom: 1rem;
+}
+
+.features-item i:hover{
+  color: rgb(70, 35, 103);
+}
+
+#testimonials,
+#cta{
+  background-color: rgb(160, 127, 191);
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.testimonials-img{
+  margin-top: 2rem;
+  width: 15%;
+  border-radius: 100%;
+}
+
+#testimonials h2,
+#cta h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+
+#testimonials em{
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  color: antiquewhite;
+}
+
+#press {
+  background-color: rgb(160, 127, 191);
+  padding: 5% 10%;
+  text-align: center;
+}
+
+#press img{
+  width: 15%;
+  margin: 2rem;
+  transition: all 0.3s;
+}
+
+#press img:hover{
+  transform: scale(1.05);
+}
+
+/* сдвигаем стрелки от контента с помощью падинга самого контетна */
+.carousel-item{
+  padding: 5% 15%;
+}
+
+#pricing {
+  padding: 5% 15%;
+  text-align: center;
+}
+
+.card{
+  background-color: rgb(160, 127, 191);
+  height: 100%;
+  text-align: center;
+}
+
+#pricing h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+}
+
+#pricing p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+#pricing button{
+  margin: 0;
+}
+
+@media (max-width: 990px){
+  .img-dog {
+    width: 55%;
+    transform: rotate(0);
+    position: static;
+    margin: 0 auto;
+  }
+  .container-fluid{
+    text-align: center;
+  }
+  .container-fluid button{
+    margin-bottom: 5rem;
+  }
+}
+
+#footer{
+  padding: 5% 15%;
+  text-align: center;
+}
+#footer i{
+  font-size: 3rem;
+  margin: 1.5rem;
+}
